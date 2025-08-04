@@ -55,13 +55,9 @@ public:
     }
 };
 
-#include <thread>
-
-using namespace std;
-
 int main() {
     CalculatorUI ui;
-    thread uiThread(&CalculatorUI::run, &ui);
-    uiThread.join();
+    ui.run();
     return 0;
 }
+// ...existing code...
